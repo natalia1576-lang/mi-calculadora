@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi calculadora científica</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <main class="calculadora">
+    <h1>Mi calculadora</h1>
+    <p class="subtitulo">Calculadora científica interactiva</p>
+
+    <input
+      id="pantalla"
+      type="text"
+      value="0"
+      aria-label="Pantalla de la calculadora"
+      readonly
+    >
+
+    <div class="botones">
+      <button data-action="clear" class="especial">AC</button>
+      <button data-action="delete" class="especial">DEL</button>
+      <button data-value="(">(</button>
+      <button data-value=")">)</button>
+
+      <button data-value="7">7</button>
+      <button data-value="8">8</button>
+      <button data-value="9">9</button>
+      <button data-value="/" class="operador">÷</button>
+
+      <button data-value="4">4</button>
+      <button data-value="5">5</button>
+      <button data-value="6">6</button>
+      <button data-value="*" class="operador">×</button>
+
+      <button data-value="1">1</button>
+      <button data-value="2">2</button>
+      <button data-value="3">3</button>
+      <button data-value="-" class="operador">−</button>
+
+      <button data-value="0">0</button>
+      <button data-value=".">.</button>
+      <button data-action="calculate" class="igual">=</button>
+      <button data-value="+" class="operador">+</button>
+
+      <button data-action="sqrt" class="cientifico">√</button>
+      <button data-value="**2" class="cientifico">x²</button>
+      <button data-value="%" class="cientifico">%</button>
+      <button data-action="sign" class="cientifico">±</button>
+    </div>
+
+    <p id="mensaje" role="status" aria-live="polite"></p>
+  </main>
+</body>
+</html>
